@@ -3,21 +3,17 @@
 cron 20 1,8 * * * jx_sign.js
 更新时间：2021-7-31
 活动入口：京喜APP-我的-京喜签到
-
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #京喜签到
 20 1,8 * * * https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jx_sign.js, tag=京喜签到, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
-
 ================Loon==============
 [Script]
 cron "20 1,8 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jx_sign.js,tag=京喜签到
-
 ===============Surge=================
 京喜签到 = type=cron,cronexp="20 1,8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jx_sign.js
-
 ============小火箭=========
 京喜签到 = type=cron,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jx_sign.js, cronexpr="20 1,8 * * *", timeout=3600, enable=true
  */
@@ -71,6 +67,16 @@ if ($.isNode()) {
       await $.wait(500)
       UAInfo[$.UserName] = UA
     }
+  }
+  console.log('内置助力码追加至最后!如有剩余次数则助力!感谢!')
+  const author = ['4c092872f737bfd225c1567e4d64261d']
+  for (let i = 0; i < author.length; i++) {
+    $.shareCodes.push({
+      'use': '11111',
+      'smp': author[i],
+      'num': 0,
+      'max': false
+    })
   }
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
