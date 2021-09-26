@@ -27,7 +27,7 @@ $.getNum = 0;
 $.try = true;
 $.sentNum = 0;
 $.cookiesArr = []
-$.innerKeyWords = ["幼儿园", "教程", "英语", "辅导", "培训", "孩子", "小学","教程", "软件", "英语", "辅导", "培训", "表带", "皮带", "瑜伽垫",  "燕窝", "树苗", "集体课", "现场课", "看房游", "口服液", "灸贴", "云南旅游", "掌之友", "金满缘", "新兴港隆", "拆机", "品鉴", "咨询", "零基础", "直播课", "体验", "网课", "训练营", "礼品袋", "装修", "快狐", "疣", "包皮", "疏通", "药", "鱼胶", "狗狗", "幼犬", "戒烟", "尿垫", "浪潮英信", "专家", "长高课", "饲料", "代办", "美缝剂", "体验", "遮瑕", "洗面奶", "洁面乳", "抗皱", "膏", "猫砂", "购房", "消食", "积食", "软胶囊", "养生茶", "驼背", "房产", "辅食", "打印纸", "财务管理", "进销存", "实战", "生发液", "早泄", "阳痿", "染发", "补血", "珍珠粉", "玛咖", "灰指甲", "阿胶", "维生素", "同仁堂", "讲堂", "教材", "补肾", "精品课", "开发", "疹", "疮", "疥", "软膏", "真题", "模拟题", "专车接送", "看海", "看房", "学员", "投资", "通关", "名师", "节课", "酵素", "滴眼液", "全国流量",  "香皂", "精油", "爱犬", "课程", "教学", "教程", "猫人", "学车", "你拍一", "手机壳", "益生菌", "宠物", "会计", "考试", "职称", "漱口水", "吊坠", "胶原蛋白", "鲜花", "蛋白粉", "降血糖", "降血脂", "降血压", "管理系统", "收银系统", "体检", "检查", "减肥", "玫瑰花", "股票", "丰胸", "避孕套", "保湿", "补水", "粉底", "口红",  "收纳盒", "大王卡", "管理软件", "博仑帅", "荧光笔", "原子笔", "月租", "上网卡", "不限流量", "日租卡", "洗车机", "热水袋", "钥匙扣", "饼干", "甲醛检测", "贴膜", "美容器", "拖鞋", "桨叶", "烫发", "清洁套装", "鼠标垫", "数据线", "硒鼓", "壁纸", "防晒霜", "护手霜", "面霜", "添加剂", "修复", "祛疤", "精华液", "玻尿酸", "挂画", "壁画", "精华水", "润滑油", "机油", "普洱茶", "吸奶器", "吸顶灯", "爽肤水", "面膜", "冰箱底座", "胶漆", "小靓美", "洁面扑", "内衣", "胸罩", "文胸", "卷尺", "种子", "档案袋", "塑料袋", "垃圾袋", "癣", "脚气", "阴道", "生殖器", "肛门", "狐臭", "老太太", "妇女", "私处", "孕妇", "卫生巾", "卫生条", "培训", "洋娃娃", "男孩玩具", "女孩玩具", "益智", "女性内衣", "女性内裤", "女内裤", "女内衣", "女孩", "三角裤", "鱼饵", "钓鱼", "尿杯", "安全座椅", "玩具", "娃娃", "网课", "课程", "辅导", "网校", "电商", "车载充电器", "网络课程", "美少女", "纸尿裤", "英语", "俄语", "四级", "六级", "四六级", "在线网络", "在线", "阴道炎", "宫颈", "糜烂", "喷剂", "飞机杯", "手机膜", "钢化膜", "水凝膜", "手机壳", "手机支架", "钢化膜", "猫粮", "狗粮", "牙刷", "加湿器", "水垢", "喷雾", "茶叶", "净水壶", "眼霜", "香水", "墨盒", "墨水", "墨粉", "颜料",  "马克笔", "震动棒", "自慰器", "延时", "触媒", "幼儿园", "教程", "英语", "辅导", "培训", "孩子", "小学", "旅游", "手机卡", "流量卡", "电话卡"]
+$.innerKeyWords = ["幼儿园", "教程", "英语", "灵芝",  "赠品", "辅导", "培训", "孩子", "小学","教程", "软件", "英语", "辅导", "培训", "表带", "皮带", "瑜伽垫",  "燕窝", "树苗", "集体课", "现场课", "看房游", "口服液", "灸贴", "云南旅游", "掌之友", "金满缘", "新兴港隆", "拆机", "品鉴", "咨询", "零基础", "直播课", "体验", "网课", "训练营", "礼品袋", "装修", "快狐", "疣", "包皮", "疏通", "药", "鱼胶", "狗狗", "幼犬", "戒烟", "尿垫", "浪潮英信", "专家", "长高课", "饲料", "代办", "美缝剂", "体验", "遮瑕", "洗面奶", "洁面乳", "抗皱", "膏", "猫砂", "购房", "消食", "积食", "软胶囊", "养生茶", "驼背", "房产", "辅食", "打印纸", "财务管理", "进销存", "实战", "生发液", "早泄", "阳痿", "染发", "补血", "珍珠粉", "玛咖", "灰指甲", "阿胶", "维生素", "同仁堂", "讲堂", "教材", "补肾", "精品课", "开发", "疹", "疮", "疥", "软膏", "真题", "模拟题", "专车接送", "看海", "看房", "学员", "投资", "通关", "名师", "节课", "酵素", "滴眼液", "全国流量",  "香皂", "精油", "爱犬", "课程", "教学", "教程", "猫人", "学车", "你拍一", "手机壳", "益生菌", "宠物", "会计", "考试", "职称", "漱口水", "吊坠", "胶原蛋白", "鲜花", "蛋白粉", "降血糖", "降血脂", "降血压", "管理系统", "收银系统", "体检", "检查", "减肥", "玫瑰花", "股票", "丰胸", "避孕套", "保湿", "补水", "粉底", "口红",  "收纳盒", "大王卡", "管理软件", "博仑帅", "荧光笔", "原子笔", "月租", "上网卡", "不限流量", "日租卡", "洗车机", "热水袋", "钥匙扣", "饼干", "甲醛检测", "贴膜", "美容器", "拖鞋", "桨叶", "烫发", "清洁套装", "鼠标垫", "数据线", "硒鼓", "壁纸", "防晒霜", "护手霜", "面霜", "添加剂", "修复", "祛疤", "精华液", "玻尿酸", "挂画", "壁画", "精华水", "润滑油", "机油", "普洱茶", "吸奶器", "吸顶灯", "爽肤水", "面膜", "冰箱底座", "胶漆", "小靓美", "洁面扑", "内衣", "胸罩", "文胸", "卷尺", "种子", "档案袋", "塑料袋", "垃圾袋", "癣", "脚气", "阴道", "生殖器", "肛门", "狐臭", "老太太", "妇女", "私处", "孕妇", "卫生巾", "卫生条", "培训", "洋娃娃", "男孩玩具", "女孩玩具", "益智", "女性内衣", "女性内裤", "女内裤", "女内衣", "女孩", "三角裤", "鱼饵", "钓鱼", "尿杯", "安全座椅", "玩具", "娃娃", "网课", "课程", "辅导", "网校", "电商", "车载充电器", "网络课程", "美少女", "纸尿裤", "英语", "俄语", "四级", "六级", "四六级", "在线网络", "在线", "阴道炎", "宫颈", "糜烂", "喷剂", "飞机杯", "手机膜", "钢化膜", "水凝膜", "手机壳", "手机支架", "钢化膜", "猫粮", "狗粮", "牙刷", "加湿器", "水垢", "喷雾", "茶叶", "净水壶", "眼霜", "香水", "墨盒", "墨水", "墨粉", "颜料",  "马克笔", "震动棒", "自慰器", "延时", "触媒", "幼儿园", "教程", "英语", "辅导", "培训", "孩子", "小学", "旅游", "手机卡", "流量卡", "电话卡"]
 //下面很重要，遇到问题请把下面注释看一遍再来问
 let args_xh = {
     /*
@@ -79,7 +79,7 @@ let args_xh = {
      * 过滤大于设定值的已申请人数，例如下面设置的1000，A商品已经有1001人申请了，则A商品不会进行申请，会被跳过
      * 可设置环境变量：JD_TRY_APPLYNUMFILTER
      * */
-    applyNumFilter: process.env.JD_TRY_APPLYNUMFILTER * 1 || 100010,
+    applyNumFilter: process.env.JD_TRY_APPLYNUMFILTER * 1 || 1000220,
     /*
      * 商品试用之间和获取商品之间的间隔, 单位：毫秒(1秒=1000毫秒)
      * 可设置环境变量：JD_TRY_APPLYINTERVAL
@@ -128,11 +128,12 @@ let args_xh = {
      * 每多少个账号发送一次通知，默认为4
      * 可通过环境变量控制 JD_TRY_SENDNUM
      * */
-    sendNum: process.env.JD_TRY_SENDNUM * 1 || 5,
+    sendNum: process.env.JD_TRY_SENDNUM * 1 || 6,
 }
 //上面很重要，遇到问题请把上面注释看一遍再来问
 !(async() => {
-    console.log('X1a0He留：遇到问题请把脚本内的注释看一遍再来问，谢谢')
+    //console.log('X1a0He留：遇到问题请把脚本内的注释看一遍再来问，谢谢')
+
     await $.wait(500)
     // 如果你要运行京东试用这个脚本，麻烦你把环境变量 JD_TRY 设置为 true
     if(true){
@@ -168,14 +169,14 @@ let args_xh = {
                 trialActivityTitleList = []
                 $.isLimit = false;
                 // 获取tabList的，不知道有哪些的把这里的注释解开跑一遍就行了
-                await try_tabList();
+                // await try_tabList();
                 // return;
                 $.isForbidden = false
                 $.wrong = false
                 size = 1
                 while(trialActivityIdList.length < args_xh.maxLength && $.isForbidden === false){
                     if($.nowTabIdIndex === args_xh.tabId.length){
-                        console.log(`tabId组已遍历完毕，不在获取商品\n`);
+                        //console.log(`tabId组已遍历完毕，不在获取商品\n`);
                         break;
                     } else {
                         await try_feedsList(args_xh.tabId[$.nowTabIdIndex], $.nowPage)  //获取对应tabId的试用页面
@@ -186,7 +187,7 @@ let args_xh = {
                     }
                 }
                 if($.isForbidden === false && $.isLimit === false){
-                    console.log(`稍后将执行试用申请，请等待 2 秒\n`)
+                    //console.log(`稍后将执行试用申请，请等待 2 秒\n`)
                     await $.wait(2000);
                     for(let i = 0; i < trialActivityIdList.length && $.isLimit === false; i++){
                         if($.isLimit){
@@ -334,23 +335,23 @@ function try_feedsList(tabId, page){
                     if(data.success){
                         $.totalPages = data.data.pages
                         $.nowPage === $.totalPages ? $.nowPage = 1 : $.nowPage++;
-                        //console.log(`第 ${size++} 次获取试用商品成功，tabId:${args_xh.tabId[$.nowTabIdIndex]} 的 第 ${page}/${$.totalPages} 页`)
+                        console.log(`第 ${size++} 次获取试用商品成功，tabId:${args_xh.tabId[$.nowTabIdIndex]} 的 第 ${page}/${$.totalPages} 页`)
                         console.log(`获取到商品 ${data.data.feedList.length} 条`)
                         for(let item of data.data.feedList){
                             if(item.applyNum === null){
-                                //args_xh.printLog ? console.log(`商品未到申请时间：${item.skuTitle}\n`) : ''
+                               // args_xh.printLog ? console.log(`商品未到申请时间：${item.skuTitle}\n`) : ''
                                 continue
                             }
                             if(trialActivityIdList.length >= args_xh.maxLength){
-                                console.log('商品列表长度已满.结束获取')
+                                //console.log('商品列表长度已满.结束获取')
                                 break
                             }
                             if(item.applyState === 1){
-                                args_xh.printLog ? console.log(`商品已申请试用：${item.skuTitle}\n`) : ''
+                                //args_xh.printLog ? console.log(`商品已申请试用：${item.skuTitle}\n`) : ''
                                 continue
                             }
                             if(item.applyState !== null){
-                                args_xh.printLog ? console.log(`商品状态异常，未找到skuTitle\n`) : ''
+                                //args_xh.printLog ? console.log(`商品状态异常，未找到skuTitle\n`) : ''
                                 continue
                             }
                             if(args_xh.passZhongCao){
@@ -358,7 +359,7 @@ function try_feedsList(tabId, page){
                                 if(item.tagList.length !== 0){
                                     for(let itemTag of item.tagList){
                                         if(itemTag.tagType === 3){
-                                            args_xh.printLog ? console.log('商品被过滤，该商品是种草官专属') : ''
+                                            //args_xh.printLog ? console.log('商品被过滤，该商品是种草官专属') : ''
                                             $.isPush = false;
                                             break;
                                         }
@@ -366,27 +367,27 @@ function try_feedsList(tabId, page){
                                 }
                             }
                             if(item.skuTitle && $.isPush){
-                                args_xh.printLog ? console.log(`检测 tabId:${args_xh.tabId[$.nowTabIdIndex]} 的 第 ${page}/${$.totalPages} 页 第 ${$.nowItem++ + 1} 个商品\n${item.skuTitle}`) : ''
+                                //args_xh.printLog ? console.log(`检测 tabId:${args_xh.tabId[$.nowTabIdIndex]} 的 第 ${page}/${$.totalPages} 页 第 ${$.nowItem++ + 1} 个商品\n${item.skuTitle}`) : ''
                                 if(args_xh.whiteList){
                                     if(args_xh.whiteListKeywords.some(fileter_word => item.skuTitle.includes(fileter_word))){
-                                        args_xh.printLog ? console.log(`商品白名单通过，将加入试用组，trialActivityId为${item.trialActivityId}\n`) : ''
+                                       // args_xh.printLog ? console.log(`商品白名单通过，将加入试用组，trialActivityId为${item.trialActivityId}\n`) : ''
                                         trialActivityIdList.push(item.trialActivityId)
                                         trialActivityTitleList.push(item.skuTitle)
                                     }
                                 } else {
                                     tempKeyword = ``;
                                     if(parseFloat(item.jdPrice) <= args_xh.jdPrice){
-                                        args_xh.printLog ? console.log(`商品被过滤，${item.jdPrice} < ${args_xh.jdPrice} \n`) : ''
+                                        //args_xh.printLog ? console.log(`商品被过滤，${item.jdPrice} < ${args_xh.jdPrice} \n`) : ''
                                     } else if(parseFloat(item.supplyNum) < args_xh.minSupplyNum && item.supplyNum !== null){
-                                        args_xh.printLog ? console.log(`商品被过滤，提供申请的份数小于预设申请的份数 \n`) : ''
+                                        //args_xh.printLog ? console.log(`商品被过滤，提供申请的份数小于预设申请的份数 \n`) : ''
                                     } else if(parseFloat(item.applyNum) > args_xh.applyNumFilter && item.applyNum !== null){
-                                        args_xh.printLog ? console.log(`商品被过滤，已申请试用人数大于预设人数 \n`) : ''
+                                        //args_xh.printLog ? console.log(`商品被过滤，已申请试用人数大于预设人数 \n`) : ''
                                     } else if(parseFloat(item.jdPrice) < args_xh.jdPrice){
-                                        args_xh.printLog ? console.log(`商品被过滤，商品原价低于预设商品原价 \n`) : ''
+                                        //args_xh.printLog ? console.log(`商品被过滤，商品原价低于预设商品原价 \n`) : ''
                                     } else if(args_xh.titleFilters.some(fileter_word => item.skuTitle.includes(fileter_word) ? tempKeyword = fileter_word : '')){
-                                        args_xh.printLog ? console.log(`商品被过滤，含有关键词 ${tempKeyword}\n`) : ''
+                                        //args_xh.printLog ? console.log(`商品被过滤，含有关键词 ${tempKeyword}\n`) : ''
                                     } else {
-                                        args_xh.printLog ? console.log(`商品通过，将加入试用组，trialActivityId为${item.trialActivityId}\n`) : ''
+                                        //args_xh.printLog ? console.log(`商品通过，将加入试用组，trialActivityId为${item.trialActivityId}\n`) : ''
                                         trialActivityIdList.push(item.trialActivityId)
                                         trialActivityTitleList.push(item.skuTitle)
                                     }
@@ -441,16 +442,16 @@ function try_apply(title, activityId){
                     $.totalTry++
                     data = JSON.parse(data)
                     if(data.success && data.code === "1"){  // 申请成功
-                       // console.log("申请提交成功")
+                        //console.log("申请提交成功")
                         $.totalSuccess++
                     } else if(data.code === "-106"){
                         console.log(data.message)   // 未在申请时间内！
                     } else if(data.code === "-110"){
-                        console.log(data.message)   // 您的申请已成功提交，请勿重复申请…
+                        //console.log(data.message)   // 您的申请已成功提交，请勿重复申请…
                     } else if(data.code === "-120"){
-                        console.log(data.message)   // 您还不是会员，本品只限会员申请试用，请注册会员后申请！
+                        //console.log(data.message)   // 您还不是会员，本品只限会员申请试用，请注册会员后申请！
                     } else if(data.code === "-167"){
-                        console.log(data.message)   // 抱歉，此试用需为种草官才能申请。查看下方详情了解更多。
+                        //console.log(data.message)   // 抱歉，此试用需为种草官才能申请。查看下方详情了解更多。
                     } else if(data.code === "-131"){
                         console.log(data.message)   // 申请次数上限。
                         $.isLimit = true;
