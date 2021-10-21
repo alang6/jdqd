@@ -1,14 +1,14 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Captain01
+name: jd_xsqjd
 
 on:
   workflow_dispatch:
   schedule:
     - cron: '11 0-23/8 * * *'
   repository_dispatch:
-    types: Captain01
+    types: jd_xsqjd
 jobs:
   build:
 
@@ -32,11 +32,11 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: 'jd_daydlt'
+      - name: 'jd_xsqjd'
         run: |
           #sleep 1
           
-          node Captain01.js
+          node jd_xsqjd.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
