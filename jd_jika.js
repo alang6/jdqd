@@ -45,7 +45,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     return;
   }
   await getAuthorShareCode()
-  console.log(`\n\n@Author：zero205\n@github：https://github.com/zero205/JD_tencent_scf/tree/main\n@Tips：默认不执行入会任务\n\n助力逻辑：优先账号内互助，有剩余助力次数再帮我助力\n`);
+  console.log(`\n\n@A助力逻辑：优先账号内互助，有剩余助力次数再帮我助力\n`);
   $.inviteList = []
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
@@ -90,7 +90,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
       cookie = cookiesArr[i];
       $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
       $.canHelp = true;
-      console.log(`\n${$.UserName} 去助力【zero205】\n`)
+      console.log(`\n${$.UserName}\n`)
       for (let j = 0; j < $.authorCode.length && $.canHelp; j++) {
         $.item = $.authorCode[j];
         await doHelp($.item)
@@ -328,7 +328,7 @@ function openCard() {
 function getAuthorShareCode() {
   return new Promise(resolve => {
     $.get({
-      url: "https://raw.fastgit.org/zero205/updateTeam/main/shareCodes/jika.json",
+      url: "https://xr2021.coding.net/p/import-kasd/d/JDbot/git/raw/master/shareCodes/jika.json",
       headers: {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
       }
