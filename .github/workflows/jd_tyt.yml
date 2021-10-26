@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '20 1,7 * *  *'
   repository_dispatch:
-    types: jd_lsj
+    types: jd_tyt
 jobs:
   build:
 
@@ -36,7 +36,7 @@ jobs:
         run: |
           #sleep 1
           
-          node jd_lsj.js
+          node jd_tyt.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
