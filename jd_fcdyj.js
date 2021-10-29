@@ -2,7 +2,9 @@
 活动入口： 京东极速版-我的-发财大赢家
  * /
  * 基于温某人大佬的脚本修改
- * 助力逻辑：优先助力互助码环境变量，dyjCode
+ * 助力逻辑：优先助力互助码环境变量，中午10点之后再给我助力
+ * TG交流群：https://t.me/jd_zero205
+ * TG通知频道：https://t.me/jd_zero205_tz
  * /
 https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/jd_fcdyj.js
 已支持IOS双京东账号, Node.js支持N个京东账号
@@ -14,7 +16,7 @@ https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/jd_fcdyj.js
 
 ================Loon==============
 [Script]
-cron "1 0-22/3 * * *" script-path=https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/jd_fcdyj.js tag=翻翻乐
+cron "1 6-22/3 * * *" script-path=https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/jd_fcdyj.js tag=翻翻乐
 
 ===============Surge=================
 发财大赢家 = type=cron,cronexp="1 6-22/3 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/jd_fcdyj.js
@@ -45,6 +47,7 @@ const JD_API_HOST = `https://api.m.jd.com`;
         });
         return;
     }
+    console.log(`\n发财大赢家助力逻辑：优先助力填写的互助码环境变量，中午10点之后再给我助力\n`)
     message = ''
     $.helptype = 1
     $.needhelp = true
@@ -54,6 +57,7 @@ const JD_API_HOST = `https://api.m.jd.com`;
     //开红包查询
     for (let i = 0; i < cookiesArr.length && $.needhelp; i++) {
         cookie = cookiesArr[i];
+        $.hotFlag = false;
         if (cookie) {
             $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
             $.index = i + 1;
@@ -62,8 +66,9 @@ const JD_API_HOST = `https://api.m.jd.com`;
             console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
         }
         if (!dyjCode) {
-            //console.log(`\n环境变量中没有检测到助力码,开始获取【京东账号${$.index}】助力码\n`)
             await open()
+            if ($.hotFlag) continue;
+            console.log(`\n环境变量中没有检测到助力码,开始获取【京东账号${$.index}】助力码\n`)
             await getid()
         } else {
             dyjStr = dyjCode.split("@")
@@ -81,14 +86,14 @@ const JD_API_HOST = `https://api.m.jd.com`;
             }
         }
     }
-    if (new Date().getHours() >= 2) {
+    if (new Date().getHours() >= 10) {
         await getAuthorShareCode()
         if ($.authorCode && $.authorCode.length) {
             for (let i = 0; i < cookiesArr.length; i++) {
                 cookie = cookiesArr[i];
                 $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
                 $.canRun = true
-                //console.log(`\n${$.UserName} 去助力【zero205】\n`)
+                console.log(`\n${$.UserName} 去助力【zero205】\n`)
                 for (let j = 0; j < $.authorCode.length; j++) {
                     let item = $.authorCode[j];
                     await help(item.redEnvelopeId, item.inviter, 1)
@@ -107,7 +112,7 @@ const JD_API_HOST = `https://api.m.jd.com`;
         $.rewardType = 2
         if (cookie) {
             $.index = i + 1;
-            //console.log(`\n******查询【京东账号${$.index}】红包情况******\n`);
+            console.log(`\n******查询【京东账号${$.index}】红包情况******\n`);
             await getinfo()
             if ($.canDraw) {
                 await getrewardIndex()
@@ -163,6 +168,10 @@ function open() {
                     console.log(`${$.name} API请求失败，请检查网路重试`);
                 } else {
                     data = JSON.parse(data);
+                    if (data.code === 16020) {
+                        $.hotFlag = true
+                        console.log(data.errMsg);
+                    }
                 }
             } catch (e) {
                 $.logErr(e, resp);
@@ -183,7 +192,7 @@ function getid() {
                     console.log(`${$.name} API请求失败，请检查网路重试`);
                 } else {
                     data = JSON.parse(data);
-                    console.log(data.data.state)
+                    // console.log(data.data.state)
                     if (data.data.state !== 0) {
                         if (data.success && data.data) {
                             console.log(`\n【您的redEnvelopeId】：${data.data.redEnvelopeId}`)
@@ -227,11 +236,11 @@ function getinfo() {
                                 $.canDraw = true
                             }
                         } else {
-                            //console.log(`当前余额：${data.data.amount} 还需 ${data.data.needAmount} `)
+                            console.log(`当前余额：${data.data.amount} 还需 ${data.data.needAmount} `)
                         }
                     } else {
                         $.canDraw = false
-                        //console.log(`【京东账号${$.index}】为黑号，跳过`)
+                        console.log(`【京东账号${$.index}】为黑号，跳过`)
                     }
                 }
             } catch (e) {
@@ -259,7 +268,7 @@ function getrewardIndex() {
                             $.canWx = true
                         }
                     } else {
-                        //console.log(`当前已有 ${data.data.haveHelpNum} 人助力，还需 ${data.data.diffNum} 人`)
+                        console.log(`当前已有 ${data.data.haveHelpNum} 人助力，还需 ${data.data.diffNum} 人`)
                         $.canWx = false
                     }
                 }
@@ -308,7 +317,7 @@ function help(rid, inviter, type) {
 function getAuthorShareCode() {
     return new Promise(resolve => {
         $.get({
-            url: "https://xr2021.coding.net/p/import-kasd/d/JDbot/git/raw/master/shareCodes/bigWinner.json",
+            url: "https://raw.fastgit.org/zero205/updateTeam/main/shareCodes/dyj.json",
             headers: {
                 "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
             }
