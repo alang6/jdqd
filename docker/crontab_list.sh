@@ -166,7 +166,7 @@ ENV_PATH=
 40 */6 * * * node /scripts/jd_tyt.js >> /log/jd_tyt.log 2>&1
 10 */6 * * * node /scripts/jd_fcdyj.js >> /log/jd_fcdyj.log 2>&1
 02 1,4,10,12 * * * node /scripts/jd_qjd.js >> /log/jd_qjd.log 2>&1
-
+02 0,12,18,20 * * * node /scripts/jd_redEnvelope.js >> /log/jd_redEnvelope.log 2>&1
 
 
 
