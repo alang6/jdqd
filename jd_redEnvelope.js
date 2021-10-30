@@ -6,7 +6,7 @@
 const $ = new Env('京享红包');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
-const Faker = require('./utils/JDSignValidator.js')  
+const Faker = require('./JDSignValidator.js')  
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
 let message = '', newCookie = '', msg = ''
