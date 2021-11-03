@@ -163,13 +163,29 @@ ENV_PATH=
 40 */6 * * * node /scripts/jd_tyt.js >> /log/jd_tyt.log 2>&1
 32 */6 * * * node /scripts/jd_fcdyj.js >> /log/jd_fcdyj.log 2>&1
 02 1,4,10,12 * * * node /scripts/jd_qjd.js >> /log/jd_qjd.log 2>&1
-02 0,12,18,20 * * * node /scripts/jd_redEnvelope.js >> /log/jd_redEnvelope.log 2>&1
+00 20,21 * * * node /scripts/jd_redEnvelope1.js >> /log/jd_redEnvelope1.log 2>&1
 15 4,8,13,15 * * * node /scripts/jd_lol.js >> /log/jd_lol.log 2>&1
 25 5,8,13,17 * * * node /scripts/jd_jddj_bean.js >> /log/jd_jddj_bean.log 2>&1
 45 6,8,13,15 * * * node /scripts/jd_jddj_fruit.js >> /log/jd_jddj_fruit.log 2>&1
 55 7,10,13,16 * * * node /scripts/jd_jddj_fruit_collectWater.js >> /log/jd_jddj_fruit_collectWater.log 2>&1
 05 1,8,13,20 * * * node /scripts/jd_jddj_getPoints.js >> /log/jd_jddj_getPoints.log 2>&1
 18 3,8,13,17 * * * node /scripts/jd_jddj_plantBeans.js >> /log/jd_jddj_plantBeans.log 2>&1
+28 2,9,15,17 * * * node /scripts/jd_fcwb.js >> /log/jd_fcwb.log 2>&1
+3,15 20 31 10 * node /scripts/jd_hotNeight.js >> /log/jd_hotNeight.log 2>&1
+01 0,6,12,20 * * * node /scripts/jd_hello_wind_xtg.js >> /log/jd_hello_wind_xtg.log 2>&1
+03 0,6,12,20 * * * node /scripts/jd_xtgsign.js >> /log/jd_xtgsign.log 2>&1
+26 0,9,18,23 * * * node /scripts/jd_nnfls.js >> /log/jd_nnfls.js 2>&1
+
+
+
+
+
+
+
+
+
+
+
 
 
 
