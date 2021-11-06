@@ -43,7 +43,7 @@ if ($.isNode()) {
         } catch (e) {
             $.logErr(e)
         }
-        await $.wait(2000);
+        await $.wait(22000);
     }
 })().catch((e) => {
     $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
