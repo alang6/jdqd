@@ -1,6 +1,8 @@
 首先手机[下载termux软件](https://f-droid.org/repo/com.termux_117.apk)
 
-(如果以下文件下载很慢或者下载失败请自行挂梯子)
+许多应用市场也可以找到
+
+
 
 [视频教程](https://share.weiyun.com/vwW2QVlZ)
 
