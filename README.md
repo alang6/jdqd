@@ -10,6 +10,8 @@
 ##然后输入命令：cp /root/jd/config/bak/config.sh_2021-9-6-6-23-164 /root/jd/config/config.sh -f 回车即可恢复
 
 
+######### 安卓手机安装运行方法:
+https://github.com/hajiuhajiu/jdsign1112/edit/master/README.md
 
 尽量不要用action跑， 否则github封号，如需要github action运行,请注册帐户后先复制或导入其它项目,等一周后再复制本脚本.
 
