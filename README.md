@@ -11,7 +11,7 @@
 
 
 ######### 安卓手机安装运行方法:
-https://github.com/hajiuhajiu/jdsign1112/edit/master/README.md
+https://github.com/hajiuhajiu/jdsign1112/blob/master/icon/Termux.md
 
 尽量不要用action跑， 否则github封号，如需要github action运行,请注册帐户后先复制或导入其它项目,等一周后再复制本脚本.
 
