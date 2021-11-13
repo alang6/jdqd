@@ -1,3 +1,16 @@
+已经添加支持手机运行,教程马上添加
+前几天操作失误,导致配置文件重置
+配置文件从备份恢复方法:
+可以添加定时文件 ,然后更新cookie
+22 * * * * bash /root/jd/gitpull1.sh >/dev/null 2>&1
+保存后会自动更新,更新时间为每小时的第22分钟
+手动恢复:
+
+下载putty 登陆后输入  cd config/bak   然后输入 ls  察看最后的config.sh文件备份,如config.sh_2021-9-6-6-23-164
+##然后输入命令：cp /root/jd/config/bak/config.sh_2021-9-6-6-23-164 /root/jd/config/config.sh -f 回车即可恢复
+
+
+
 尽量不要用action跑， 否则github封号，如需要github action运行,请注册帐户后先复制或导入其它项目,等一周后再复制本脚本.
 
 低调使用，不要fork！尽量第一时间同步更新脚本。防止失联请收藏gitee备份地址：https://gitee.com/xr2021/jdsign
