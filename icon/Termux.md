@@ -12,8 +12,10 @@
 `bash <(curl -Ls https://ghproxy.com/https://raw.githubusercontent.com/hajiuhajiu/scripts/master/docker/termux)`
 
 安装过程中如果出现`(Y/I/N/O/D/Z) [default=N]`，输入y回车就行，安装到最后会出现你的面板地址和账号密码，如果面板进不去的话清除软件数据按照下方手动执行命令安装。
+
+
 由于众所周知的原因, GITHUB登录非常不稳定,脚本会复制一次基本不成功,在termux里输入
-### :进入文件夹目录:
+###:进入文件夹目录:
 
 `cd jd-base/`               //到jd-base目录,以经进入无需再输
 
