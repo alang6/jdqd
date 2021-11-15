@@ -21,7 +21,7 @@ bash git_pull.sh   //运行同步， 限于网络问题，通常需要多运行�
 
 
 
-手动恢复:
+找回之前的备份方法:
 
 下载putty 登陆后输入  cd config/bak   然后输入 ls  察看最后的config.sh文件备份,如config.sh_2021-9-6-6-23-164
 ##然后输入命令：cp /root/jd/config/bak/config.sh_2021-9-6-6-23-164 /root/jd/config/config.sh -f 回车即可恢复
