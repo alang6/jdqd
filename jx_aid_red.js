@@ -47,3 +47,4 @@ async function main(id) {
     await $.curl(dec.url)
     console.log($.source.data.prize.discount)
 }
+
