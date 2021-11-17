@@ -3,7 +3,7 @@
 #京东到家果园
 10 8,12,18 * * * jd_jddj_fruit.js,tag=京东到家果园,img-url=https://raw.githubusercontent.com/58xinian/icon/master/ddxw.png, enabled=true
 */
-let isNotify = true;//是否通知,仅限nodejs
+let isNotify = false;//是否通知,仅限nodejs
 let ckPath = './jdCookie.js';//ck路径,环境变量:JDDJ_CKPATH
 
 const $ = new API("jd_jddj_fruit");
